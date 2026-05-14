@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+
+  <rect width="1200" height="560" rx="16" fill="url(#bg)"/>
+
+  <text x="600" y="42" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700" font-family="Arial, sans-serif">重构场景：前后架构对比</text>
+  <text x="600" y="66" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">天气查询脚本从单体 88 行 main() 重构为 7 模块的 weather 包</text>
+
+  <!-- ===== BEFORE ===== -->
+  <g transform="translate(30, 90)">
+    <rect width="540" height="430" rx="12" fill="rgba(248,81,73,0.04)" stroke="rgba(248,81,73,0.3)" stroke-width="1.5" filter="url(#sh)"/>
+    <rect width="540" height="40" rx="12" fill="rgba(248,81,73,0.1)"/>
+    <rect y="32" width="540" height="8" fill="rgba(248,81,73,0.1)"/>
+    <text x="270" y="26" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700" font-family="Arial, sans-serif">重构前</text>
+
+    <!-- Main file -->
+    <rect x="20" y="56" width="500" height="36" rx="6" fill="rgba(248,81,73,0.08)" stroke="rgba(248,81,73,0.2)"/>
+    <text x="40" y="80" fill="#e6edf3" font-size="13" font-weight="600" font-family="Arial, sans-serif">weather.py</text>
+    <text x="420" y="80" fill="#f85149" font-size="12" font-family="Arial, sans-serif">88 行，1 个函数</text>
+
+    <!-- Code block -->
+    <rect x="20" y="105" width="500" height="240" rx="8" fill="rgba(139,148,158,0.04)" stroke="rgba(248,81,73,0.15)"/>
+    <text x="40" y="130" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">def main():  ← 79 行，包含全部逻辑</text>
+    <line x1="40" y1="140" x2="490" y2="140" stroke="rgba(139,148,158,0.08)"/>
+
+    <text x="55" y="165" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">sys.argv 参数解析</text>
+    <text x="55" y="192" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">城市硬编码字典 (5 城市)</text>
+    <text x="55" y="219" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">API URL 拼接 + HTTP 请求</text>
+    <text x="55" y="246" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">JSON 解析 + 天气码映射</text>
+    <text x="55" y="273" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">循环格式化输出</text>
+    <text x="55" y="300" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">裸 except Exception 错误处理</text>
+
+    <!-- Warning -->
+    <rect x="20" y="360" width="500" height="36" rx="6" fill="rgba(248,81,73,0.06)" stroke="rgba(248,81,73,0.15)"/>
+    <text x="270" y="384" text-anchor="middle" fill="#f85149" font-size="12" font-family="Arial, sans-serif">全部逻辑耦合在单函数中，0 个测试</text>
+
+    <!-- Stats -->
+    <rect x="20" y="408" width="160" height="38" rx="6" fill="rgba(248,81,73,0.06)"/>
+    <text x="100" y="430" text-anchor="middle" fill="#f85149" font-size="16" font-weight="700" font-family="Arial, sans-serif">79 行</text>
+    <text x="100" y="445" text-anchor="middle" fill="#8b949e" font-size="10" font-family="Arial, sans-serif">最大函数</text>
+
+    <rect x="190" y="408" width="160" height="38" rx="6" fill="rgba(248,81,73,0.06)"/>
+    <text x="270" y="430" text-anchor="middle" fill="#f85149" font-size="16" font-weight="700" font-family="Arial, sans-serif">0</text>
+    <text x="270" y="445" text-anchor="middle" fill="#8b949e" font-size="10" font-family="Arial, sans-serif">单元测试</text>
+
+    <rect x="360" y="408" width="160" height="38" rx="6" fill="rgba(248,81,73,0.06)"/>
+    <text x="440" y="430" text-anchor="middle" fill="#f85149" font-size="16" font-weight="700" font-family="Arial, sans-serif">1</text>
+    <text x="440" y="445" text-anchor="middle" fill="#8b949e" font-size="10" font-family="Arial, sans-serif">关注点</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(578, 295)">
+    <polygon points="0,-15 22,0 0,15" fill="#3fb950"/>
+    <text x="12" y="-22" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600" font-family="Arial, sans-serif">重构</text>
+  </g>
+
+  <!-- ===== AFTER ===== -->
+  <g transform="translate(608, 90)">
+    <rect width="562" height="430" rx="12" fill="rgba(63,185,80,0.04)" stroke="rgba(63,185,80,0.3)" stroke-width="1.5" filter="url(#sh)"/>
+    <rect width="562" height="40" rx="12" fill="rgba(63,185,80,0.1)"/>
+    <rect y="32" width="562" height="8" fill="rgba(63,185,80,0.1)"/>
+    <text x="281" y="26" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700" font-family="Arial, sans-serif">重构后</text>
+
+    <!-- Entry -->
+    <rect x="16" y="56" width="530" height="30" rx="6" fill="rgba(63,185,80,0.1)" stroke="rgba(63,185,80,0.3)"/>
+    <text x="36" y="77" fill="#3fb950" font-size="12" font-weight="600" font-family="Arial, sans-serif">weather.py</text>
+    <text x="230" y="77" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">CLI 入口，41 行，组装管线</text>
+
+    <!-- Module grid - 2 columns -->
+    <rect x="16" y="96" width="258" height="30" rx="5" fill="rgba(139,148,158,0.04)" stroke="rgba(139,148,158,0.1)"/>
+    <text x="32" y="116" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">weather/cli.py</text>
+    <text x="160" y="116" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">命令行参数解析</text>
+
+    <rect x="288" y="96" width="258" height="30" rx="5" fill="rgba(139,148,158,0.04)" stroke="rgba(139,148,158,0.1)"/>
+    <text x="304" y="116" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">weather/cities.py</text>
+    <text x="432" y="116" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">城市坐标查找</text>
+
+    <rect x="16" y="136" width="258" height="30" rx="5" fill="rgba(139,148,158,0.04)" stroke="rgba(139,148,158,0.1)"/>
+    <text x="32" y="156" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">weather/api.py</text>
+    <text x="160" y="156" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">HTTP + 分层异常</text>
+
+    <rect x="288" y="136" width="258" height="30" rx="5" fill="rgba(139,148,158,0.04)" stroke="rgba(139,148,158,0.1)"/>
+    <text x="304" y="156" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">weather/parser.py</text>
+    <text x="432" y="156" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">天气码 + 解析</text>
+
+    <rect x="16" y="176" width="258" height="30" rx="5" fill="rgba(139,148,158,0.04)" stroke="rgba(139,148,158,0.1)"/>
+    <text x="32" y="196" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">weather/formatter.py</text>
+    <text x="160" y="196" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">输出格式化</text>
+
+    <!-- Test highlight -->
+    <rect x="16" y="220" width="530" height="30" rx="6" fill="rgba(63,185,80,0.1)" stroke="rgba(63,185,80,0.3)"/>
+    <text x="36" y="241" fill="#3fb950" font-size="12" font-weight="600" font-family="Arial, sans-serif">weather/test_weather.py</text>
+    <text x="280" y="241" fill="#3fb950" font-size="11" font-family="Arial, sans-serif">20 个单元测试全部通过</text>
+
+    <!-- Key metrics -->
+    <rect x="16" y="265" width="170" height="52" rx="6" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+    <text x="101" y="290" text-anchor="middle" fill="#3fb950" font-size="20" font-weight="700" font-family="Arial, sans-serif">1 → 8</text>
+    <text x="101" y="310" text-anchor="middle" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">文件数</text>
+
+    <rect x="196" y="265" width="170" height="52" rx="6" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+    <text x="281" y="290" text-anchor="middle" fill="#3fb950" font-size="20" font-weight="700" font-family="Arial, sans-serif">79 → 37</text>
+    <text x="281" y="310" text-anchor="middle" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">最大函数行数</text>
+
+    <rect x="376" y="265" width="170" height="52" rx="6" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+    <text x="461" y="290" text-anchor="middle" fill="#3fb950" font-size="20" font-weight="700" font-family="Arial, sans-serif">0 → 20</text>
+    <text x="461" y="310" text-anchor="middle" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">单元测试</text>
+
+    <!-- Error handling -->
+    <rect x="16" y="330" width="530" height="30" rx="6" fill="rgba(57,197,207,0.06)" stroke="rgba(57,197,207,0.15)"/>
+    <text x="36" y="351" fill="#39c5cf" font-size="12" font-family="Arial, sans-serif">WeatherAPIError 分层异常</text>
+    <text x="300" y="351" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">超时 + 状态码 + JSON 校验</text>
+
+    <!-- Bottom note -->
+    <text x="281" y="390" text-anchor="middle" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">CLI 行为完全不变，8 个关注点独立可测</text>
+
+    <!-- Phase stats -->
+    <rect x="16" y="402" width="170" height="22" rx="5" fill="rgba(63,185,80,0.06)"/>
+    <text x="101" y="417" text-anchor="middle" fill="#3fb950" font-size="10" font-family="Arial, sans-serif">8 张任务卡片</text>
+
+    <rect x="196" y="402" width="170" height="22" rx="5" fill="rgba(63,185,80,0.06)"/>
+    <text x="281" y="417" text-anchor="middle" fill="#3fb950" font-size="10" font-family="Arial, sans-serif">Foundation → Integration</text>
+
+    <rect x="376" y="402" width="170" height="22" rx="5" fill="rgba(63,185,80,0.06)"/>
+    <text x="461" y="417" text-anchor="middle" fill="#3fb950" font-size="10" font-family="Arial, sans-serif">Phase 0-5 闭环</text>
+  </g>
+</svg>

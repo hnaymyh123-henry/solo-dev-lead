@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 580" width="1100" height="580">
+  <rect width="1100" height="580" rx="16" fill="#0d1117"/>
+  <text x="550" y="42" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700" font-family="Arial, sans-serif">Phase 4 — Counterexample Self-Check</text>
+  <text x="550" y="66" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">Bug 修复场景中覆盖的 13 个边界场景，全部通过</text>
+
+  <rect x="40" y="90" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="60" y="114" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">Null / 缺失输入</text>
+  <text x="60" y="134" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">无参数时正确显示 Usage 提示</text>
+
+  <rect x="390" y="90" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="410" y="114" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">空输入</text>
+  <text x="410" y="134" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">空字符串参数正确报 ValueError</text>
+
+  <rect x="740" y="90" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="760" y="114" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">除零崩溃</text>
+  <text x="760" y="134" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">b=0 时输出友好错误而非崩溃</text>
+
+  <rect x="40" y="160" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="60" y="184" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">负数输入</text>
+  <text x="60" y="204" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">a=-5 时打印 Negative Warning</text>
+
+  <rect x="390" y="160" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="410" y="184" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">超大数值</text>
+  <text x="410" y="204" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">1e16 触发 Large Numbers Warning</text>
+
+  <rect x="740" y="160" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="760" y="184" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">multiply 精度丢失</text>
+  <text x="760" y="204" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">两数均大于 1e8 时打印精度预警</text>
+
+  <rect x="40" y="230" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="60" y="254" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">非数字参数</text>
+  <text x="60" y="274" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">传入 abc 时提示 must be numbers</text>
+
+  <rect x="390" y="230" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="410" y="254" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">未知操作</text>
+  <text x="410" y="274" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">传入 pow 时提示 Unknown operation</text>
+
+  <rect x="740" y="230" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="760" y="254" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">参数数量不对</text>
+  <text x="760" y="274" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">少于 4 个参数时显示 Usage 提示</text>
+
+  <rect x="40" y="300" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="60" y="324" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">零值运算</text>
+  <text x="60" y="344" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">0+0, 0-0, 0x0 均正常计算</text>
+
+  <rect x="390" y="300" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="410" y="324" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">浮点精度</text>
+  <text x="410" y="344" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">0.1+0.2 正常浮点计算</text>
+
+  <rect x="740" y="300" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="760" y="324" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">大数乘法</text>
+  <text x="760" y="344" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">1e10x1e10 正常计算 + 预警提示</text>
+
+  <rect x="40" y="370" width="330" height="56" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.15)"/>
+  <text x="60" y="394" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">极小浮点数</text>
+  <text x="60" y="414" fill="#8b949e" font-size="11" font-family="Arial, sans-serif">1e-300 正常处理，不溢出</text>
+
+  <rect x="40" y="455" width="1020" height="44" rx="10" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.2)"/>
+  <text x="550" y="483" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="600" font-family="Arial, sans-serif">13 / 13  Counterexample 场景全部通过  —  Phase 4 无阻塞项，可交付</text>
+
+  <text x="550" y="540" text-anchor="middle" fill="#484f58" font-size="11" font-family="Arial, sans-serif">来自 Phase 4 Review Checklist  —  Critical 项全部通过，Quality 项无阻塞</text>
+</svg>

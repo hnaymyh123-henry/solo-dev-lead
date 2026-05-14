@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <rect width="800" height="300" rx="16" fill="#0d1117"/>
+  <text x="400" y="50" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700" font-family="Arial, sans-serif">测试：Null / 缺失输入</text>
+  <text x="400" y="80" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">测试：空输入</text>
+  <text x="400" y="110" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">测试：除零崩溃</text>
+  <text x="400" y="140" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">测试：负数输入</text>
+  <text x="400" y="170" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">测试：非数字参数</text>
+  <text x="400" y="200" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">测试：零值运算</text>
+  <text x="400" y="240" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="600" font-family="Arial, sans-serif">如果这些中文都正常显示，说明渲染器没问题</text>
+</svg>

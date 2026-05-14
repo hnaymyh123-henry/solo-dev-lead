@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 550" width="1100" height="550">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/></filter>
+  </defs>
+
+  <rect width="1100" height="550" rx="16" fill="url(#bg)"/>
+
+  <text x="550" y="42" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700" font-family="Arial, sans-serif">Skill 驱动 vs 直接实现</text>
+  <text x="550" y="66" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">同一个 LOC 统计工具任务，左侧使用 solo-dev-lead skill，右侧不使用</text>
+
+  <!-- Table header -->
+  <g transform="translate(40, 95)">
+    <rect width="1020" height="36" rx="8" fill="rgba(88,166,255,0.08)"/>
+    <text x="250" y="24" fill="#e6edf3" font-size="13" font-weight="600" font-family="Arial, sans-serif">对比维度</text>
+    <text x="540" y="24" text-anchor="middle" fill="#58a6ff" font-size="13" font-weight="600" font-family="Arial, sans-serif">使用 Skill ✅</text>
+    <text x="850" y="24" text-anchor="middle" fill="#8b949e" font-size="13" font-weight="600" font-family="Arial, sans-serif">不使用 Skill</text>
+  </g>
+
+  <!-- Row 1 -->
+  <g transform="translate(40, 135)">
+    <rect width="1020" height="34" rx="4" fill="rgba(139,148,158,0.03)"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">工作流程</text>
+    <text x="320" y="22" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">Phase 0→5 完整闭环</text>
+    <text x="700" y="22" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">直接编码</text>
+  </g>
+  <g transform="translate(40, 173)">
+    <rect width="1020" height="34" rx="4" fill="transparent"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">任务卡片</text>
+    <text x="320" y="22" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">✅ 3 张卡片 + 验收标准</text>
+    <text x="700" y="22" fill="#f85149" font-size="12" font-family="Arial, sans-serif">✗ 无</text>
+  </g>
+  <g transform="translate(40, 211)">
+    <rect width="1020" height="34" rx="4" fill="rgba(139,148,158,0.03)"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">测试设施</text>
+    <text x="320" y="22" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">✅ test_fixture 目录</text>
+    <text x="700" y="22" fill="#f85149" font-size="12" font-family="Arial, sans-serif">✗ 无</text>
+  </g>
+  <g transform="translate(40, 249)">
+    <rect width="1020" height="34" rx="4" fill="transparent"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">边界检查</text>
+    <text x="320" y="22" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">✅ Counterexample Checklist（6 场景）</text>
+    <text x="700" y="22" fill="#d2991d" font-size="12" font-family="Arial, sans-serif">△ 顺手处理</text>
+  </g>
+  <g transform="translate(40, 287)">
+    <rect width="1020" height="34" rx="4" fill="rgba(139,148,158,0.03)"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">错误处理粒度</text>
+    <text x="320" y="22" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">✅ 区分"目录不存在"和"不是目录"</text>
+    <text x="700" y="22" fill="#d2991d" font-size="12" font-family="Arial, sans-serif">△ 合并为一条提示</text>
+  </g>
+  <g transform="translate(40, 325)">
+    <rect width="1020" height="34" rx="4" fill="transparent"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">可测试性</text>
+    <text x="320" y="22" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">✅ 返回 dict，数据与展示分离</text>
+    <text x="700" y="22" fill="#d2991d" font-size="12" font-family="Arial, sans-serif">△ 返回 tuple，耦合输出</text>
+  </g>
+  <g transform="translate(40, 363)">
+    <rect width="1020" height="34" rx="4" fill="rgba(139,148,158,0.03)"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">复盘记录</text>
+    <text x="320" y="22" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">✅ 已知问题 + 延期项 + 下一步</text>
+    <text x="700" y="22" fill="#f85149" font-size="12" font-family="Arial, sans-serif">✗ 无</text>
+  </g>
+  <g transform="translate(40, 401)">
+    <rect width="1020" height="34" rx="4" fill="transparent"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">过程可追溯</text>
+    <text x="320" y="22" fill="#3fb950" font-size="12" font-family="Arial, sans-serif">✅ 每个 Phase 有产出</text>
+    <text x="700" y="22" fill="#f85149" font-size="12" font-family="Arial, sans-serif">✗ 无</text>
+  </g>
+  <g transform="translate(40, 439)">
+    <rect width="1020" height="34" rx="4" fill="rgba(139,148,158,0.03)"/>
+    <text x="20" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">代码行数</text>
+    <text x="320" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">125 行</text>
+    <text x="700" y="22" fill="#e6edf3" font-size="12" font-family="Arial, sans-serif">105 行</text>
+  </g>
+
+  <!-- Summary bar -->
+  <g transform="translate(40, 488)">
+    <rect width="1020" height="30" rx="6" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.15)" stroke-width="1"/>
+    <text x="510" y="20" text-anchor="middle" fill="#58a6ff" font-size="12" font-family="Arial, sans-serif">结论：小任务 Skill 略显"重"，但中大型任务（多文件/多模块/架构决策）价值非常明显</text>
+  </g>
+</svg>
