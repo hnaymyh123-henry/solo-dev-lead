@@ -26,6 +26,24 @@ SOLO Dev Lead 把一次开发请求拆成 5 个阶段：
 4. **Phase 3**：按任务卡执行，保留范围边界。
 5. **Phase 4/5**：Review、验证、Retro 和下一步建议。
 
+## 真实 TRAE 运行截图
+
+下面这些截图来自 TRAE SOLO 中运行 `solo-dev-lead` 的测试任务，覆盖新项目启动、Bug 修复和重构三个场景。
+
+![TRAE SOLO 运行结果](assets/screenshots/trae-solo-run-result.png)
+
+### 场景 1：新项目启动
+
+![新项目启动 - 密码生成器 CLI](assets/screenshots/01-new-project-cli.png)
+
+### 场景 2：Bug 修复
+
+![Bug 修复 - 计算器除零崩溃](assets/screenshots/02-bugfix-calculator.png)
+
+### 场景 3：重构
+
+![重构 - 天气脚本模块化](assets/screenshots/03-refactor-weather.png)
+
 ## 展示素材
 
 ### 三个典型场景

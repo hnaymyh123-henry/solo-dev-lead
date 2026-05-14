@@ -57,11 +57,13 @@ solo-dev-lead/
 
 我在 TRAE SOLO 中做了实际测试：导入 Skill 后，可以正常触发，并且 SOLO 会按照 Skill 里的 Tech Lead 流程执行，不会直接跳到写代码。测试中它能先分类需求，再生成任务拆解和验证步骤，符合预期。
 
-【截图 1：Skill 在 TRAE SOLO 中成功导入】
+![TRAE SOLO 运行结果](https://raw.githubusercontent.com/hnaymyh123-henry/solo-dev-lead/main/assets/screenshots/trae-solo-run-result.png)
 
-【截图 2：输入开发需求后，SOLO Dev Lead 先进行需求分类和范围确认】
+![场景 1：新项目启动 - 密码生成器 CLI](https://raw.githubusercontent.com/hnaymyh123-henry/solo-dev-lead/main/assets/screenshots/01-new-project-cli.png)
 
-【截图 3：Skill 输出任务卡 / 架构决策 / 验证清单】
+![场景 2：Bug 修复 - 计算器除零崩溃](https://raw.githubusercontent.com/hnaymyh123-henry/solo-dev-lead/main/assets/screenshots/02-bugfix-calculator.png)
+
+![场景 3：重构 - 天气脚本模块化](https://raw.githubusercontent.com/hnaymyh123-henry/solo-dev-lead/main/assets/screenshots/03-refactor-weather.png)
 
 ## 4、使用步骤
 
